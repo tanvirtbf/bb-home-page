@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Slider from "../layout/slider";
 import MyImage from "../../public/png/banner1.png";
@@ -23,10 +23,10 @@ const sliderInfo = {
 };
 
 const sliderClass = {
-    parentClass : "h-full w-full",
-    swiperSlideClass : " w-full h-full",
-    imageClass : "",
-}
+  parentClass: "h-full w-full",
+  swiperSlideClass: " w-full h-full",
+  imageClass: "",
+};
 
 const Hero = () => {
   return (
