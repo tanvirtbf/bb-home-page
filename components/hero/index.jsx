@@ -23,14 +23,14 @@ const sliderInfo = {
 };
 
 const sliderClass = {
-    parentClass : "h-full w-full flex items-center px-20",
-    swiperSlideClass : "bg-yellow-200 py-10 w-full h-full",
+    parentClass : "h-full w-full",
+    swiperSlideClass : " w-full h-full",
     imageClass : "",
 }
 
 const Hero = () => {
   return (
-    <div>
+    <div className="w-full h-full">
       <Slider data={heroContent} info={sliderInfo} className={sliderClass} />
     </div>
   );
