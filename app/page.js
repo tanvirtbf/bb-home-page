@@ -10,7 +10,7 @@ export default async function Home() {
       <div className="w-full h-[600px] rounded-2xl">
         <Hero />
       </div>
-      <div>
+      <div className="my-10">
         <BestOfferInBrands />
       </div>
     </div>

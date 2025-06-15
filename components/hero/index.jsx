@@ -31,7 +31,7 @@ const sliderClass = {
 const Hero = () => {
   return (
     <div className="w-full h-full">
-      <Slider data={heroContent} info={sliderInfo} className={sliderClass} />
+      <Slider aboutSlide={"image"} data={heroContent} info={sliderInfo} className={sliderClass} />
     </div>
   );
 };

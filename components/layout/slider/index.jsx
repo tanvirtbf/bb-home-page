@@ -4,10 +4,12 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Slide from "./components/Slide";
+
+import ImageSlide from "./components/ImageSlide";
+import CardSlide from "./components/CardSlide";
 
 
-export default function Slider({ data = [], info={}, className="" } = {}) {
+export default function Slider({ aboutSlide="", data = [], info={}, className="" } = {}) {
     const {navigation, pagination, spaceBetween, autoplay, slidesPerView, modules} = info
   return (
     <div className={className.parentClass}>
@@ -21,7 +23,8 @@ export default function Slider({ data = [], info={}, className="" } = {}) {
       >
         {data.map((item, i) => (
           <SwiperSlide className={className.swiperSlideClass}>
-            <Slide key={item.id} slideImage={item.url} />
+            {aboutSlide==="image" && <ImageSlide key={item.id} slideImage={item.url} />}
+            {aboutSlide==="card" && <CardSlide key={item.id} slideImage={item.url} />}
           </SwiperSlide>
         ))}
       </Swiper>
