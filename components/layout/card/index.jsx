@@ -6,7 +6,7 @@ import ShortDescContainer from "./components/ShortDescContainer";
 
 const Card = ({ data = {} } = {}) => {
   const { url, title, price, shortDesc } = data;
-  console.log(url);
+
   return (
     <div className="flex flex-col gap-1 justify-center">
       <ImageContainer img={url} />

@@ -1,8 +1,11 @@
 import React from 'react'
+import Card from '../../card'
 
-const CardSlide = () => {
+// {id: 1, url: CardImage, title: TitleOne, price: "Starting At ৳799", shortDesc: "Collagen Supplements"}
+
+const CardSlide = ({ data={} }={}) => {
   return (
-    <div>CardSlide</div>
+    <Card key={data.id} data={data} />
   )
 }
 

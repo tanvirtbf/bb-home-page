@@ -15,7 +15,7 @@ const heroContent = [
 
 const sliderInfo = {
   navigation: true,
-  pagination: true,
+  pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
   slidesPerView: 1,
@@ -23,7 +23,7 @@ const sliderInfo = {
 };
 
 const sliderClass = {
-  parentClass: "h-full w-full",
+  parentClass: "h-full w-full slider-container",
   swiperSlideClass: " w-full h-full",
   imageClass: "",
 };

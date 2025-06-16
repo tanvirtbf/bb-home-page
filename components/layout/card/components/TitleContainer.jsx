@@ -4,7 +4,7 @@ import React from 'react'
 const TitleContainer = ({ title="" }={}) => {
   return (
     <div>
-        <Image src={title} height={0} width={0}  />
+        <Image src={title} height={0} width={0} alt='Image'  />
     </div>
   )
 }

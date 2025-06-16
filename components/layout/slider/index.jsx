@@ -24,7 +24,7 @@ export default function Slider({ aboutSlide="", data = [], info={}, className=""
         {data.map((item, i) => (
           <SwiperSlide className={className.swiperSlideClass}>
             {aboutSlide==="image" && <ImageSlide key={item.id} slideImage={item.url} />}
-            {aboutSlide==="card" && <CardSlide key={item.id} slideImage={item.url} />}
+            {aboutSlide==="card" && <CardSlide key={item.id} data={item} />}
           </SwiperSlide>
         ))}
       </Swiper>
