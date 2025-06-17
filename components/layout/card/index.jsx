@@ -4,12 +4,12 @@ import TitleContainer from "./components/TitleContainer";
 import PriceContainer from "./components/PriceContainer";
 import ShortDescContainer from "./components/ShortDescContainer";
 
-const Card = ({ data = {} } = {}) => {
+const Card = ({ data = {}, imgClass="" } = {}) => {
   const { url, title, price, shortDesc } = data;
 
   return (
     <div className="flex flex-col gap-1 justify-center">
-      <ImageContainer img={url} />
+      <ImageContainer img={url} imgClass={imgClass} />
       <TitleContainer title={title} />
       <PriceContainer price={price} />
       <ShortDescContainer shortDesc={shortDesc} />

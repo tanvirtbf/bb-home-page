@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+.bg-custom-gradient {
+  background: linear-gradient(135deg, #FF1A58, #FF6F61);
+}
 
 /* Custom position */
 .slider-container .swiper-pagination {

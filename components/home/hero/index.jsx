@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Slider from "../layout/slider";
-import MyImage from "../../public/png/banner1.png";
+import Slider from "@/components/layout/slider";
+import MyImage from "../../../public/png/banner1.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const heroContent = [
@@ -31,7 +31,12 @@ const sliderClass = {
 const Hero = () => {
   return (
     <div className="w-full h-full">
-      <Slider aboutSlide={"image"} data={heroContent} info={sliderInfo} className={sliderClass} />
+      <Slider
+        aboutSlide={"image"}
+        data={heroContent}
+        info={sliderInfo}
+        className={sliderClass}
+      />
     </div>
   );
 };
