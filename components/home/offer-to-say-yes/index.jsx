@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Slider from "@/components/layout/slider";
-import MyImage from "../../../public/png/banner1.png";
+import MyImage from "../../../public/png/imge1.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const heroContent = [
@@ -14,24 +14,25 @@ const heroContent = [
 ];
 
 const sliderInfo = {
-  navigation: true,
+  navigation: false,
   pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
-  slidesPerView: 1,
+  slidesPerView: 3,
   modules: [Navigation, Pagination, Autoplay],
 };
 
 const sliderClass = {
-  parentClass: "h-full w-full slider-container",
-  swiperSlideClass: " w-full h-full",
-  imageParentClass: "w-full h-[600px] relative rounded-2xl overflow-hidden",
-  imageClass: "",
+  parentClass: "h-full w-full slider-container h-60",
+  swiperSlideClass: "w-full h-full",
+  imageParentClass: "w-full h-[200px] relative rounded-2xl overflow-hidden",
+  imageClass: "object-cover",
 };
 
-const Hero = () => {
+const OfferToSayYes = () => {
   return (
     <div className="w-full h-full">
+      <h2 className="mb-4 text-4xl font-bold leading-7 text-center text-black">Offers To Say Yes</h2>
       <Slider
         aboutSlide={"image"}
         data={heroContent}
@@ -42,4 +43,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default OfferToSayYes;

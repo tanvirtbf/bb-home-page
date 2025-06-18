@@ -10,7 +10,9 @@ import CardSlide from "./components/CardSlide";
 
 
 export default function Slider({ aboutSlide="", data = [], info={}, className="" } = {}) {
-    const {navigation, pagination, spaceBetween, autoplay, slidesPerView, modules} = info
+
+  const {navigation, pagination, spaceBetween, autoplay, slidesPerView, modules} = info
+
   return (
     <div className={className.parentClass}>
       <Swiper
@@ -23,7 +25,7 @@ export default function Slider({ aboutSlide="", data = [], info={}, className=""
       >
         {data.map((item, i) => (
           <SwiperSlide className={className.swiperSlideClass}>
-            {aboutSlide==="image" && <ImageSlide key={item.id} slideImage={item.url} />}
+            {aboutSlide==="image" && <ImageSlide key={item.id} slideImage={item.url} parentCss={className.imageParentClass} imgClass={className.imageClass} />}
             {aboutSlide==="card" && <CardSlide key={item.id} data={item} imgClass={className.imageClass} />}
           </SwiperSlide>
         ))}

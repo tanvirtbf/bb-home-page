@@ -2,10 +2,10 @@
 import Image from "next/image";
 import React from "react";
 
-const ImageSlide = ({ slideImage = "" } = {}) => {
+const ImageSlide = ({ slideImage = "", imgClass="", parentCss="" } = {}) => {
   return (
-    <div className="w-full h-[600px] relative rounded-2xl overflow-hidden">
-      <Image src={slideImage} alt="Image"  fill sizes="100vw" className="object-cover" />
+    <div className={parentCss}>
+      <Image src={slideImage} alt="Image"  fill sizes="100vw" className={imgClass} />
     </div>
   );
 };
