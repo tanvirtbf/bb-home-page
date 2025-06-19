@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../card'
+import Card from '../../cards/card'
 
 // {id: 1, url: CardImage, title: TitleOne, price: "Starting At ৳799", shortDesc: "Collagen Supplements"}
 

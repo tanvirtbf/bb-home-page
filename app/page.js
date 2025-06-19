@@ -1,4 +1,7 @@
 import BestOfferInBrands from "@/components/home/best-offer-in-brands";
+import BestProductOfWeek from "@/components/home/best-product-of-week";
+import ComboOffer from "@/components/home/combo-offer";
+import CustomerReview from "@/components/home/customer-review";
 import Hero from "@/components/home/hero";
 import OfferToSayYes from "@/components/home/offer-to-say-yes";
 import OffersInCategory from "@/components/home/offers-in-category";
@@ -14,23 +17,32 @@ export default async function Home() {
       <div className="w-full h-[600px] rounded-2xl">
         <Hero />
       </div>
-      <div className="my-10">
+      <div className="my-10 bg-white">
         <BestOfferInBrands />
       </div>
-      <div className="sm:px-28 px-3 sm:py-10 py-3 sm:bg-[#EDD0BC] bg-white">
+      <div className="sm:px-28 px-3  sm:py-10 py-3 sm:bg-[#EDD0BC] bg-white">
         <TopCategories />
       </div>
-      <div className="px-3 py-6 sm:px-36 sm:py-16">
+      <div className="px-3 py-6 bg-white sm:px-36 sm:py-16">
         <OffersInCategory />
       </div>
-      <div className="py-4 sm:py-10">
-        <VisitOutlet />
-      </div>
-      <div className="w-full h-auto rounded-2xl">
+      <div className="w-full h-auto bg-white rounded-2xl">
         <OfferToSayYes />
       </div>
-      <div className="w-full h-auto my-10">
+      <div className="w-full h-auto my-10 bg-white">
         <SingleBanner />
+      </div>
+      <div className="w-full h-auto py-16">
+        <CustomerReview />
+      </div>
+      <div className="py-4 bg-white sm:py-10">
+        <VisitOutlet />
+      </div>
+      <div className="bg-[#FFF8F3] rounded-[20px] px-20 py-10">
+        <BestProductOfWeek />
+      </div>
+      <div>
+        <ComboOffer />
       </div>
     </div>
   );
