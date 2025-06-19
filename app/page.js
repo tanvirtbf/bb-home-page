@@ -2,6 +2,7 @@ import BestOfferInBrands from "@/components/home/best-offer-in-brands";
 import BestProductOfWeek from "@/components/home/best-product-of-week";
 import ComboOffer from "@/components/home/combo-offer";
 import CustomerReview from "@/components/home/customer-review";
+import FeaturedInVideos from "@/components/home/featured-in-videos";
 import Hero from "@/components/home/hero";
 import OfferToSayYes from "@/components/home/offer-to-say-yes";
 import OffersInCategory from "@/components/home/offers-in-category";
@@ -10,7 +11,7 @@ import TopCategories from "@/components/home/top-categories";
 import VisitOutlet from "@/components/home/visit-outlet";
 
 export default async function Home() {
-  await fetch("https://procodrr.vercel.app/?sleep=1000");
+  // await fetch("https://procodrr.vercel.app/?sleep=1000");
 
   return (
     <div className="max-w-[1670px] mx-auto overflow-hidden min-h-screen h-auto px-10 py-6">
@@ -41,7 +42,7 @@ export default async function Home() {
       <div className="bg-[#FFF8F3] rounded-[20px] px-20 py-10">
         <BestProductOfWeek />
       </div>
-      <div>
+      <div className="my-10">
         <ComboOffer />
       </div>
     </div>

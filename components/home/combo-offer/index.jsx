@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import CardImage from "../../../public/png/card1.jpg";
+import CardImage from "../../../public/png/image5.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Slider from "@/components/layout/slider";
 
@@ -85,20 +85,21 @@ const sliderInfo = {
   pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
-  slidesPerView: 5,
+  slidesPerView: 3,
   modules: [Navigation, Pagination, Autoplay],
 };
 
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
-  swiperSlideClass: " w-full h-full",
+  swiperSlideClass: "w-full h-full",
   imageParentClass: "w-full h-[600px] relative rounded-2xl overflow-hidden",
-  imageClass: "",
+  imageClass: "w-full h-full object-cover",
 };
 
 const BestOfferInBrands = () => {
   return (
-    <div className="flex gap-3">
+    <div className="flex flex-col gap-3">
+      <h1 className="text-4xl font-bold text-center">Exclusive Accessories</h1>
       <Slider
         aboutSlide={"combo-card"}
         data={cardData}

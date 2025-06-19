@@ -3,10 +3,10 @@ import View from './components/View'
 import Absolute from './components/Absolute'
 
 
-const ComboCard = ({ data={} }={}) => {
+const ComboCard = ({ data={}, imgClass="" }={}) => {
   return (
     <div className='relative'>
-      <View img={data.url} />
+      <View image={data.url} imgClass={imgClass} />
       <Absolute price={data.price} text={data.shortDesc} />
     </div>
   )
