@@ -2,15 +2,16 @@
 import React from "react";
 import Slider from "@/components/layout/slider";
 import MyImage from "../../../public/png/banner1.png";
+import MobileImage from '../../../public/mobile/image11.png'
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const heroContent = [
-  { id: 1, url: MyImage },
-  { id: 2, url: MyImage },
-  { id: 3, url: MyImage },
-  { id: 4, url: MyImage },
-  { id: 5, url: MyImage },
-  { id: 6, url: MyImage },
+  { id: 1, url: MyImage, mobileUrl: MobileImage },
+  { id: 2, url: MyImage, mobileUrl: MobileImage },
+  { id: 3, url: MyImage, mobileUrl: MobileImage },
+  { id: 4, url: MyImage, mobileUrl: MobileImage },
+  { id: 5, url: MyImage, mobileUrl: MobileImage },
+  { id: 6, url: MyImage, mobileUrl: MobileImage },
 ];
 
 const sliderInfo = {
@@ -25,7 +26,7 @@ const sliderInfo = {
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
   swiperSlideClass: " w-full h-full",
-  imageParentClass: "w-full h-[600px] relative rounded-2xl overflow-hidden",
+  imageParentClass: "w-full sm:h-[600px] h-[200px] relative rounded-2xl overflow-hidden",
   imageClass: "",
 };
 
