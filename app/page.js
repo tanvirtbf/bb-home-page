@@ -18,11 +18,11 @@ export default async function Home() {
       <div className="w-full h-[600px] rounded-2xl">
         <Hero />
       </div>
+      <div className="w-full h-auto my-20">
+        <TopCategories />
+      </div>
       <div className="my-10 bg-white">
         <BestOfferInBrands />
-      </div>
-      <div className="sm:px-28 px-3  sm:py-10 py-3 sm:bg-[#EDD0BC] bg-white">
-        <TopCategories />
       </div>
       <div className="px-3 py-6 bg-white sm:px-36 sm:py-16">
         <OffersInCategory />

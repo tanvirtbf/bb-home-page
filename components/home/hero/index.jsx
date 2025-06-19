@@ -15,7 +15,7 @@ const heroContent = [
 ];
 
 const sliderInfo = {
-  navigation: true,
+  navigation: false,
   pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,

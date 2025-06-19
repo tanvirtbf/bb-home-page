@@ -6,7 +6,7 @@ import TitleTwo from "../../../public/png/title2.png";
 import TitleThree from "../../../public/png/title3.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Slider from "@/components/layout/slider";
-
+import SectionTitle from "@/components/layout/title/section-title";
 
 const cardData = [
   {
@@ -106,19 +106,22 @@ const sliderInfo = {
 
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
-  swiperSlideClass: " w-full h-full rounded-full",
+  swiperSlideClass: "w-full h-full rounded-full",
   imageClass: "rounded-full",
 };
 
 const TopCategories = () => {
   return (
-    <div className="flex gap-3">
-      <Slider
-        aboutSlide={"card"}
-        data={cardData}
-        info={sliderInfo}
-        className={sliderClass}
-      />
+    <div className="flex flex-col gap-9">
+      <SectionTitle title="Top categroies" />
+      <div className="sm:px-28 px-3 sm:py-10 py-3 sm:bg-[#EDD0BC] bg-white rounded-xl">
+        <Slider
+          aboutSlide={"card"}
+          data={cardData}
+          info={sliderInfo}
+          className={sliderClass}
+        />
+      </div>
     </div>
   );
 };
