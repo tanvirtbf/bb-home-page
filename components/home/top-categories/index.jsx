@@ -124,17 +124,17 @@ const sliderClass = {
 const cardCssClass = {
   title: {
     type: "icon",
-    css : "flex justify-center"
+    css: "flex justify-center",
   },
   price: {
     type: "text",
-    css : "text-xl font-semibold leading-5 text-[#FF1A58] text-center"
+    css: "text-xl font-semibold leading-5 text-[#FF1A58] text-center",
   },
   shortDesc: {
     type: "text",
-    css : "text-[#5A5A5A] font-semibold text-sm leading-5 text-center"
+    css: "text-[#5A5A5A] font-semibold text-sm leading-5 text-center",
   },
-}
+};
 
 const TopCategories = () => {
   return (

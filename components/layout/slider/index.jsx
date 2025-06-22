@@ -15,6 +15,7 @@ export default function Slider({ aboutSlide="", data = [], info={}, className={}
 
   const {navigation, pagination, spaceBetween, autoplay, slidesPerView, modules, breakpoints} = info
 
+
   return (
     <div className={className.parentClass}>
       <Swiper

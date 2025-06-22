@@ -1,6 +1,5 @@
 "use client"
 
-// components/CenteredProductSlider.js
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
@@ -11,7 +10,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const CenteredProductSlider = () => {
+const ProductSlider = () => {
   // Dummy data array matching your image
   const products = [
     {
@@ -204,4 +203,4 @@ const CenteredProductSlider = () => {
   );
 };
 
-export default CenteredProductSlider;
+export default ProductSlider;
