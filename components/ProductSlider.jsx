@@ -1,70 +1,88 @@
-"use client"
+"use client";
 
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+
+// import image
+import ImageOne from "../public/png/p11.png";
+import ImageTwo from "../public/png/p22.png";
+import ImageThree from "../public/png/p33.png";
+import ImageFour from "../public/png/p44.png";
+import ImageFive from "../public/png/p55.png";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Image from "next/image";
+import VideoCard from "./layout/cards/video-card";
 
 const ProductSlider = () => {
   // Dummy data array matching your image
   const products = [
     {
       id: 1,
-      title: 'NACINAMIDE',
-      subtitle: 'With LIPSTICK',
-      price: 'QAR 2000',
-      category: 'PEPTIDE SERUM',
-      tag: 'Makeup Reimagined'
+      title: "NACINAMIDE",
+      subtitle: "With LIPSTICK",
+      price: "QAR 2000",
+      category: "PEPTIDE SERUM",
+      tag: "Makeup Reimagined",
+      image: ImageOne,
     },
     {
       id: 2,
-      title: 'BALM-LIKE',
-      subtitle: 'CARE MOCHA',
-      price: 'QAR 2000',
-      category: 'Beauty Tools',
-      tag: 'MELL'
+      title: "BALM-LIKE",
+      subtitle: "CARE MOCHA",
+      price: "QAR 2000",
+      category: "Beauty Tools",
+      tag: "MELL",
+      image: ImageTwo,
     },
     {
       id: 3,
-      title: 'VITAMIN C',
-      subtitle: 'Brightening',
-      price: 'QAR 2000',
-      category: 'Beauty Tools',
-      tag: 'New'
+      title: "VITAMIN C",
+      subtitle: "Brightening",
+      price: "QAR 2000",
+      category: "Beauty Tools",
+      tag: "New",
+      image: ImageThree,
     },
     {
       id: 4,
-      title: 'HYALURONIC',
-      subtitle: 'Acid Serum',
-      price: 'QAR 2000',
-      category: 'Beauty Tools',
-      tag: 'Bestseller'
+      title: "HYALURONIC",
+      subtitle: "Acid Serum",
+      price: "QAR 2000",
+      category: "Beauty Tools",
+      tag: "Bestseller",
+      image: ImageFour,
     },
     {
       id: 5,
-      title: 'RETINOL',
-      subtitle: 'Night Complex',
-      price: 'QAR 2000',
-      category: 'Beauty Tools',
-      tag: 'Pro'
-    }
+      title: "RETINOL",
+      subtitle: "Night Complex",
+      price: "QAR 2000",
+      category: "Beauty Tools",
+      tag: "Pro",
+      image: ImageFive,
+    },
   ];
 
   return (
-    <div className="slider-container">
-      <h2 className="section-title">See what creators are sharing</h2>
-      <p className="section-subtitle">FEATURED IN VIDEOS</p>
-      
+    <div className="p-5 max-w-[1200px] my-0 mx-auto">
+      <h2 className="text-base font-medium text-[#FF1A58] leading-4 text-center my-2">
+        See what creators are sharing
+      </h2>
+      <p className="text-4xl font-bold leading-7 text-center text-black uppercase">
+        FEATURED IN VIDEOS
+      </p>
+
       <Swiper
-        effect={'coverflow'}
+        effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={'auto'}
+        slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -82,11 +100,15 @@ const ProductSlider = () => {
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <div className="product-card">
-              <div className="product-tag">{product.tag}</div>
-              <h3 className="product-title">{product.title}</h3>
-              <p className="product-subtitle">{product.subtitle}</p>
-              <p className="product-category">{product.category}</p>
-              <p className="product-price">{product.price}</p>
+              <div>
+                <Image
+                  src={product.image}
+                  width={300}
+                  height={400}
+                  alt={product.title}
+                />
+              </div>
+              <div>This is Description Here</div>
             </div>
           </SwiperSlide>
         ))}
@@ -97,24 +119,24 @@ const ProductSlider = () => {
           width: 100%;
           padding: 50px 0;
         }
-        
+
         .centered-swiper .swiper-slide {
           width: 280px;
           height: auto;
           transition: all 0.4s ease;
         }
-        
+
         .centered-swiper .swiper-slide-active {
           transform: scale(1.15);
           z-index: 10;
         }
-        
+
         .centered-swiper .swiper-slide-prev,
         .centered-swiper .swiper-slide-next {
           transform: scale(0.95);
           opacity: 0.9;
         }
-        
+
         .centered-swiper .swiper-slide-prev-prev,
         .centered-swiper .swiper-slide-next-next {
           transform: scale(0.85);
@@ -127,16 +149,16 @@ const ProductSlider = () => {
           padding: 20px;
           max-width: 1200px;
           margin: 0 auto;
-          font-family: 'Arial', sans-serif;
+          font-family: "Arial", sans-serif;
         }
-        
+
         .section-title {
           text-align: center;
           font-size: 24px;
           margin-bottom: 5px;
           color: #333;
         }
-        
+
         .section-subtitle {
           text-align: center;
           font-size: 16px;
@@ -145,12 +167,12 @@ const ProductSlider = () => {
           text-transform: uppercase;
           letter-spacing: 2px;
         }
-        
+
         .product-card {
           background: white;
           border-radius: 15px;
           padding: 25px;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           height: 380px;
           display: flex;
           flex-direction: column;
@@ -159,7 +181,7 @@ const ProductSlider = () => {
           position: relative;
           margin: 0 10px;
         }
-        
+
         .product-tag {
           position: absolute;
           top: 15px;
@@ -170,20 +192,20 @@ const ProductSlider = () => {
           font-size: 12px;
           color: #666;
         }
-        
+
         .product-title {
           font-size: 24px;
           margin: 10px 0;
           color: #222;
           font-weight: bold;
         }
-        
+
         .product-subtitle {
           font-size: 14px;
           color: #888;
           margin-bottom: 15px;
         }
-        
+
         .product-category {
           font-size: 13px;
           color: #555;
@@ -191,7 +213,7 @@ const ProductSlider = () => {
           text-transform: uppercase;
           letter-spacing: 1px;
         }
-        
+
         .product-price {
           font-size: 16px;
           color: #000;
