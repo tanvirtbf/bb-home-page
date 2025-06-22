@@ -4,7 +4,7 @@ import React from 'react'
 const ImageContainer = ({ img="", imgClass="" }={}) => {
   return (
     <div className='w-full h-full'>
-        <Image src={img} width={300} height={400} alt='Card Image' className={imgClass} />
+        <Image src={img} width={300} height={200} alt='Card Image' className={imgClass} />
     </div> 
   )
 }

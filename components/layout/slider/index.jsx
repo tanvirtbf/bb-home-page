@@ -11,7 +11,7 @@ import ReviewCard from "../cards/review-card";
 import ComboCard from "../cards/combo-card";
 
 
-export default function Slider({ aboutSlide="", data = [], info={}, className="" } = {}) {
+export default function Slider({ aboutSlide="", data = [], info={}, className={}, cardCss={} } = {}) {
 
   const {navigation, pagination, spaceBetween, autoplay, slidesPerView, modules, breakpoints} = info
 
@@ -25,12 +25,11 @@ export default function Slider({ aboutSlide="", data = [], info={}, className=""
         slidesPerView={slidesPerView}
         modules={modules}
         breakpoints={breakpoints}
-        
       >
         {data.map((item, i) => (
           <SwiperSlide className={className.swiperSlideClass}>
             {aboutSlide==="image" && <ImageSlide key={item.id} slideImage={item.url} mobileImage={item.mobileUrl} parentCss={className.imageParentClass} imgClass={className.imageClass} />}
-            {aboutSlide==="card" && <CardSlide key={item.id} data={item} imgClass={className.imageClass} />}
+            {aboutSlide==="card" && <CardSlide key={item.id} data={item} imgClass={className.imageClass} cardCss={cardCss} />}
             {aboutSlide==="review-card" && <ReviewCard key={item.id} data={item} imgClass={className.imageClass} />}
             {aboutSlide==="combo-card" && <ComboCard key={item.id} data={item} imgClass={className.imageClass} />}
           </SwiperSlide>

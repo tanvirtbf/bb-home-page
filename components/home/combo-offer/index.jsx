@@ -4,7 +4,6 @@ import CardImage from "../../../public/png/image5.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Slider from "@/components/layout/slider";
 
-
 const cardData = [
   {
     id: 1,
@@ -87,13 +86,24 @@ const sliderInfo = {
   autoplay: true,
   slidesPerView: 3,
   modules: [Navigation, Pagination, Autoplay],
+  breakpoints: {
+    0: {
+      slidesPerView: 1.7, // Mobile (0px and up)
+    },
+    768: {
+      slidesPerView: 3, // Tablet (768px and up)
+    },
+    1024: {
+      slidesPerView: 5, // Desktop (1024px and up) – your original setting
+    },
+  },
 };
 
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
   swiperSlideClass: "w-full h-full",
   imageParentClass: "w-full h-[600px] relative rounded-2xl overflow-hidden",
-  imageClass: "w-full h-full object-cover",
+  imageClass: "w-full h-full object-cover rounded-xl",
 };
 
 const BestOfferInBrands = () => {

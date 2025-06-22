@@ -110,7 +110,7 @@ const sliderInfo = {
       slidesPerView: 3, // Tablet (768px and up)
     },
     1024: {
-      slidesPerView: 1, // Desktop (1024px and up) – your original setting
+      slidesPerView: 5, // Desktop (1024px and up) – your original setting
     },
   },
 };
@@ -120,6 +120,21 @@ const sliderClass = {
   swiperSlideClass: "w-full h-full rounded-full",
   imageClass: "rounded-full",
 };
+
+const cardCssClass = {
+  title: {
+    type: "icon",
+    css : "flex justify-center"
+  },
+  price: {
+    type: "text",
+    css : "text-xl font-semibold leading-5 text-[#FF1A58] text-center"
+  },
+  shortDesc: {
+    type: "text",
+    css : "text-[#5A5A5A] font-semibold text-sm leading-5 text-center"
+  },
+}
 
 const TopCategories = () => {
   return (
@@ -131,6 +146,7 @@ const TopCategories = () => {
           data={cardData}
           info={sliderInfo}
           className={sliderClass}
+          cardCss={cardCssClass}
         />
       </div>
     </div>

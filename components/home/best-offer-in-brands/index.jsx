@@ -7,7 +7,6 @@ import TitleThree from "../../../public/png/title3.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Slider from "@/components/layout/slider";
 
-
 const cardData = [
   {
     id: 1,
@@ -110,7 +109,7 @@ const sliderInfo = {
       slidesPerView: 3, // Tablet (768px and up)
     },
     1024: {
-      slidesPerView: 1, // Desktop (1024px and up) – your original setting
+      slidesPerView: 5, // Desktop (1024px and up) – your original setting
     },
   },
 };
@@ -119,8 +118,23 @@ const sliderClass = {
   parentClass: "h-full w-full slider-container",
   swiperSlideClass: " w-full h-full",
   imageParentClass: "w-full h-[600px] relative rounded-2xl overflow-hidden",
-  imageClass: "",
+  imageClass: "rounded-xl",
 };
+
+const cardCssClass = {
+  title: {
+    type: "icon",
+    css : "flex justify-center"
+  },
+  price: {
+    type: "text",
+    css : "text-xl font-semibold leading-5 text-[#FF1A58] text-center"
+  },
+  shortDesc: {
+    type: "text",
+    css : "text-[#5A5A5A] font-semibold text-sm leading-5 text-center"
+  },
+}
 
 const BestOfferInBrands = () => {
   return (
@@ -130,6 +144,7 @@ const BestOfferInBrands = () => {
         data={cardData}
         info={sliderInfo}
         className={sliderClass}
+        cardCss={cardCssClass}
       />
     </div>
   );

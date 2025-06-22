@@ -12,7 +12,7 @@ const renderTabs = () => totalTabs.map((tab) => <SingleTab key={tab.id} name={ta
 
 const Tab = () => {
   return (
-    <div className="flex items-center justify-center gap-4">
+    <div className="flex items-center justify-center gap-[6px] sm:gap-4">
       {renderTabs()}
     </div>
   );

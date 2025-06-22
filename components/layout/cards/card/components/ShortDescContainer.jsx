@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ShortDescContainer = ({ shortDesc="" }={}) => {
+const ShortDescContainer = ({ shortDesc="", className="" }={}) => {
   return (
-    <div>{shortDesc}</div>
+    <div className={className}>{shortDesc}</div>
   )
 }
 

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PriceContainer = ({ price="" }={}) => {
+const PriceContainer = ({ price="", className="" }={}) => {
   return (
-    <div>{price}</div>
+    <div className={className}>{price}</div>
   )
 }
 

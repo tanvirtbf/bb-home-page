@@ -10,7 +10,6 @@ import TitleTwo from "../../../public/png/title2.png";
 import TitleThree from "../../../public/png/title3.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-
 const cardData = [
   {
     id: 1,
@@ -105,13 +104,39 @@ const sliderInfo = {
   autoplay: true,
   slidesPerView: 5,
   modules: [Navigation, Pagination, Autoplay],
+  breakpoints: {
+    0: {
+      slidesPerView: 1.7, // Mobile (0px and up)
+    },
+    768: {
+      slidesPerView: 3, // Tablet (768px and up)
+    },
+    1024: {
+      slidesPerView: 5, // Desktop (1024px and up) – your original setting
+    },
+  },
 };
 
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
   swiperSlideClass: " w-full h-full",
-  imageClass: "",
+  imageClass: "rounded-xl",
 };
+
+const cardCssClass = {
+  title: {
+    type: "icon",
+    css : "flex justify-center"
+  },
+  price: {
+    type: "text",
+    css : "text-xl font-semibold leading-5 text-[#FF1A58] text-center"
+  },
+  shortDesc: {
+    type: "text",
+    css : "text-[#5A5A5A] font-semibold text-sm leading-5 text-center"
+  },
+}
 
 const OffersInCategory = () => {
   return (
@@ -120,12 +145,13 @@ const OffersInCategory = () => {
       <div>
         <Tab />
       </div>
-      <div className="flex gap-3 sm:mt-11 mt-4">
+      <div className="flex gap-3 mt-4 sm:mt-11">
         <Slider
           aboutSlide={"card"}
           data={cardData}
           info={sliderInfo}
           className={sliderClass}
+          cardCss={cardCssClass}
         />
       </div>
     </div>
