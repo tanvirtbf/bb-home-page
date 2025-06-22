@@ -102,6 +102,17 @@ const sliderInfo = {
   autoplay: true,
   slidesPerView: 5,
   modules: [Navigation, Pagination, Autoplay],
+  breakpoints: {
+    0: {
+      slidesPerView: 1.7, // Mobile (0px and up)
+    },
+    768: {
+      slidesPerView: 3, // Tablet (768px and up)
+    },
+    1024: {
+      slidesPerView: 1, // Desktop (1024px and up) – your original setting
+    },
+  },
 };
 
 const sliderClass = {

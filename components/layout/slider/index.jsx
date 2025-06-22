@@ -13,7 +13,7 @@ import ComboCard from "../cards/combo-card";
 
 export default function Slider({ aboutSlide="", data = [], info={}, className="" } = {}) {
 
-  const {navigation, pagination, spaceBetween, autoplay, slidesPerView, modules} = info
+  const {navigation, pagination, spaceBetween, autoplay, slidesPerView, modules, breakpoints} = info
 
   return (
     <div className={className.parentClass}>
@@ -24,6 +24,8 @@ export default function Slider({ aboutSlide="", data = [], info={}, className=""
         autoplay={autoplay}
         slidesPerView={slidesPerView}
         modules={modules}
+        breakpoints={breakpoints}
+        
       >
         {data.map((item, i) => (
           <SwiperSlide className={className.swiperSlideClass}>
