@@ -28,13 +28,13 @@ export default async function Home() {
       <div className="py-10 bg-white sm:py-20">
         <OffersInCategory />
       </div>
-      <div className="w-full h-auto bg-white rounded-2xl">
+      <div className="w-full py-3 bg-white sm:py-6">
         <OfferToSayYes />
       </div>
-      <div className="w-full h-auto my-10 bg-white">
+      <div className="w-full h-auto my-3 bg-white sm:my-10">
         <SingleBanner />
       </div>
-      <div className="w-full h-auto py-16">
+      <div className="w-full h-auto py-5 sm:py-16">
         <CustomerReview />
       </div>
       <div className="py-4 bg-white sm:py-10">

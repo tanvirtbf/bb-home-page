@@ -2,7 +2,7 @@ import React from 'react'
 
 const Title = ({ text="" }={}) => {
   return (
-    <div className='text-xl font-semibold text-black'>{text}</div>
+    <div className='text-sm font-semibold text-black sm:text-xl'>{text}</div>
   )
 }
 

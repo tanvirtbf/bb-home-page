@@ -44,7 +44,7 @@ const sliderClass = {
 
 const OfferToSayYes = () => {
   return (
-    <div className="w-full h-full">
+    <div className="flex flex-col gap-3 sm:gap-9">
       <SectionTitle title="Offers to say yes" />
       <Slider
         aboutSlide={"image"}

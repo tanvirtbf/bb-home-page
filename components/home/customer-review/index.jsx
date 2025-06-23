@@ -77,19 +77,19 @@ const data = [
 const sliderInfo = {
   navigation: false,
   pagination: { clickable: true },
-  spaceBetween: 10,
+  spaceBetween: 20,
   autoplay: true,
   slidesPerView: 4,
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
     0: {
-      slidesPerView: 1.1, // Mobile (0px and up)
+      slidesPerView: 1.4, // Mobile (0px and up)
     },
     768: {
       slidesPerView: 2.2, // Tablet (768px and up)
     },
     1024: {
-      slidesPerView: 5, // Desktop (1024px and up) – your original setting
+      slidesPerView: 4.3, // Desktop (1024px and up) – your original setting
     },
   },
 };
@@ -103,7 +103,7 @@ const sliderClass = {
 
 const CustomerReview = () => {
   return (
-    <div className="w-full h-full">
+    <div className="flex flex-col gap-3 sm:gap-9">
       <SectionTitle title="Customer reviews" />
       <Slider
         aboutSlide={"review-card"}
