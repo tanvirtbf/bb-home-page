@@ -2,7 +2,7 @@
 import React from "react";
 import Slider from "@/components/layout/slider";
 import MyImage from "../../../public/png/imge1.png";
-import MobileImage from '../../../public/mobile/image22.png'
+import MobileImage from '../../../public/mobile/image222.png'
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import SectionTitle from "@/components/layout/title/section-title";
 
@@ -24,7 +24,7 @@ const sliderInfo = {
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
     0: {
-      slidesPerView: 1.1, // Mobile (0px and up)
+      slidesPerView: 1.5, // Mobile (0px and up)
     },
     768: {
       slidesPerView: 2.2, // Tablet (768px and up)
@@ -38,8 +38,8 @@ const sliderInfo = {
 const sliderClass = {
   parentClass: "h-full w-full slider-container h-60",
   swiperSlideClass: "w-full h-full",
-  imageParentClass: "w-full h-auto relative rounded-2xl overflow-hidden",
-  imageClass: "object-cover rounded-xl",
+  imageParentClass: "w-full relative",
+  imageClass: "w-full h-[96px] sm:h-[221px] rounded-2xl",
 };
 
 const OfferToSayYes = () => {
