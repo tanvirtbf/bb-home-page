@@ -5,19 +5,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 // import image
-import ImageOne from "../public/png/p11.png";
-import ImageTwo from "../public/png/p22.png";
-import ImageThree from "../public/png/p33.png";
-import ImageFour from "../public/png/p44.png";
-import ImageFive from "../public/png/p55.png";
+import ImageOne from "../../../public/png/p11.png";
+import ImageTwo from "../../../public/png/p22.png";
+import ImageThree from "../../../public/png/p33.png";
+import ImageFour from "../../../public/png/p44.png";
+import ImageFive from "../../../public/png/p55.png";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Image from "next/image";
-import VideoCard from "./layout/cards/video-card";
+import TopSection from "./components/top-section";
+import BottomSection from "./components/bottom-section";
 
 const ProductSlider = () => {
   // Dummy data array matching your image
@@ -70,7 +70,7 @@ const ProductSlider = () => {
   ];
 
   return (
-    <div className="p-5 max-w-[1200px] my-0 mx-auto">
+    <div className="w-full mx-auto my-0 ">
       <h2 className="text-base font-medium text-[#FF1A58] leading-4 text-center my-2">
         See what creators are sharing
       </h2>
@@ -91,8 +91,8 @@ const ProductSlider = () => {
           slideShadows: false,
         }}
         modules={[EffectCoverflow, Navigation, Pagination]}
-        navigation
-        pagination={{ clickable: true }}
+        // navigation
+        // pagination={{ clickable: true }}
         loop={true}
         initialSlide={2} // Start with center slide
         className="centered-swiper"
@@ -100,15 +100,8 @@ const ProductSlider = () => {
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <div className="product-card">
-              <div>
-                <Image
-                  src={product.image}
-                  width={300}
-                  height={400}
-                  alt={product.title}
-                />
-              </div>
-              <div>This is Description Here</div>
+              <TopSection image={product.image} />
+              <BottomSection />
             </div>
           </SwiperSlide>
         ))}
@@ -147,7 +140,7 @@ const ProductSlider = () => {
       <style jsx>{`
         .slider-container {
           padding: 20px;
-          max-width: 1200px;
+          width: 100%;
           margin: 0 auto;
           font-family: "Arial", sans-serif;
         }
@@ -170,11 +163,11 @@ const ProductSlider = () => {
 
         .product-card {
           background: white;
-          border-radius: 15px;
-          padding: 25px;
+          border-radius: 16px;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          height: 380px;
+          height: auto;
           display: flex;
+          gap: 12px;
           flex-direction: column;
           justify-content: center;
           text-align: center;

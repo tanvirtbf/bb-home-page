@@ -12,84 +12,84 @@ const cardData = [
   {
     id: 1,
     url: CardImage,
-    title: TitleOne,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 2,
     url: CardImage,
-    title: TitleTwo,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 3,
     url: CardImage,
-    title: TitleThree,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 4,
     url: CardImage,
-    title: TitleOne,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 5,
     url: CardImage,
-    title: TitleTwo,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 6,
     url: CardImage,
-    title: TitleThree,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 7,
     url: CardImage,
-    title: TitleOne,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 8,
     url: CardImage,
-    title: TitleTwo,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 9,
     url: CardImage,
-    title: TitleThree,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 10,
     url: CardImage,
-    title: TitleOne,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 11,
     url: CardImage,
-    title: TitleTwo,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
   {
     id: 12,
     url: CardImage,
-    title: TitleThree,
+    title: "Lip Bulm",
     price: "Starting At ৳799",
     shortDesc: "Collagen Supplements",
   },
@@ -97,20 +97,20 @@ const cardData = [
 
 const sliderInfo = {
   navigation: false,
-  pagination: { clickable: true },
+  // pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
   slidesPerView: 5,
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
     0: {
-      slidesPerView: 1.7, // Mobile (0px and up)
+      slidesPerView: 2.7, // Mobile (0px and up)
     },
     768: {
-      slidesPerView: 3, // Tablet (768px and up)
+      slidesPerView: 4.2, // Tablet (768px and up)
     },
     1024: {
-      slidesPerView: 5, // Desktop (1024px and up) – your original setting
+      slidesPerView: 6, // Desktop (1024px and up) – your original setting
     },
   },
 };
@@ -118,27 +118,25 @@ const sliderInfo = {
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
   swiperSlideClass: "w-full h-full rounded-full",
-  imageClass: "rounded-full",
+  imageClass: "rounded-full sm:w-[190px] w-20 sm:h-[190px] h-20",
+  imageParentClass: "w-full h-full rounded-full overflow-hidden flex justify-center items-center mb-3 sm:mb-10",
 };
 
 const cardCssClass = {
-  title: {
-    type: "icon",
-    css: "flex justify-center",
+  title : {
+    type: "text",
+    css: "text-black font-semibold text-sm sm:text-xl leading-5 text-center pb-1",
   },
   price: {
     type: "text",
-    css: "text-xl font-semibold leading-5 text-[#FF1A58] text-center",
+    css: "sm:text-xl text-sm font-semibold leading-5 text-[#FF1A58] text-center",
   },
-  shortDesc: {
-    type: "text",
-    css: "text-[#5A5A5A] font-semibold text-sm leading-5 text-center",
-  },
+  shortDesc: false
 };
 
 const TopCategories = () => {
   return (
-    <div className="flex flex-col gap-9">
+    <div className="flex flex-col gap-[2px] sm:gap-7">
       <SectionTitle title="Top categroies" />
       <div className="sm:px-28 px-3 sm:py-10 py-3 sm:bg-[#EDD0BC] bg-white rounded-xl">
         <Slider

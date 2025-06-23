@@ -16,7 +16,7 @@ const heroContent = [
 
 const sliderInfo = {
   navigation: false,
-  pagination: { clickable: true },
+  // pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
   slidesPerView: 1,

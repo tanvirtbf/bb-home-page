@@ -3,6 +3,7 @@ import React from "react";
 import Slider from "@/components/layout/slider";
 import MyImage from "../../../public/png/banner1.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import SectionTitle from "@/components/layout/title/section-title";
 
 const data = [
   {
@@ -74,7 +75,7 @@ const data = [
 ];
 
 const sliderInfo = {
-  navigation: true,
+  navigation: false,
   pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
@@ -82,10 +83,10 @@ const sliderInfo = {
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
     0: {
-      slidesPerView: 1.7, // Mobile (0px and up)
+      slidesPerView: 1.1, // Mobile (0px and up)
     },
     768: {
-      slidesPerView: 3, // Tablet (768px and up)
+      slidesPerView: 2.2, // Tablet (768px and up)
     },
     1024: {
       slidesPerView: 5, // Desktop (1024px and up) – your original setting
@@ -103,9 +104,7 @@ const sliderClass = {
 const CustomerReview = () => {
   return (
     <div className="w-full h-full">
-      <h2 className="mb-10 text-4xl font-bold leading-7 text-center text-black uppercase">
-        customer reviews
-      </h2>
+      <SectionTitle title="Customer reviews" />
       <Slider
         aboutSlide={"review-card"}
         data={data}

@@ -3,8 +3,8 @@ import React from 'react'
 
 const TitleContainer = ({ title="", className="" }={}) => {
   return (
-    <div className={className}>
-        <Image src={title} height={0} width={0} alt='Image'  />
+    <div className="flex justify-center w-full h-full">
+        <Image src={title} height={0} width={0} alt='Image' className={className} />
     </div>
   )
 }

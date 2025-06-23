@@ -8,13 +8,17 @@
 .slider-container .swiper-pagination {
   position: relative;
   margin-top: 20px; 
+  width: fit-content;
   text-align: center;
+  /* background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  padding: 10px; */
 }
 
 /* Custom dots */
 .slider-container .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background-color: #ccc;
   opacity: 1;
   transition: background-color 0.3s;
@@ -23,5 +27,5 @@
 
 /* Active dot style */
 .slider-container .swiper-pagination-bullet-active {
-  background-color: #FF1A58; 
+  background-color: #da2aa5; 
 }

@@ -6,6 +6,7 @@ import TitleTwo from "../../../public/png/title2.png";
 import TitleThree from "../../../public/png/title3.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Slider from "@/components/layout/slider";
+import SectionTitle from "@/components/layout/title/section-title";
 
 const cardData = [
   {
@@ -95,15 +96,15 @@ const cardData = [
 ];
 
 const sliderInfo = {
-  navigation: true,
-  pagination: { clickable: true },
+  // navigation: true,
+  // pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
   slidesPerView: 5,
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
     0: {
-      slidesPerView: 1.7, // Mobile (0px and up)
+      slidesPerView: 2.7, // Mobile (0px and up)
     },
     768: {
       slidesPerView: 3, // Tablet (768px and up)
@@ -117,28 +118,29 @@ const sliderInfo = {
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
   swiperSlideClass: " w-full h-full",
-  imageParentClass: "w-full h-[600px] relative rounded-2xl overflow-hidden",
+  imageParentClass: "w-full relative rounded-2xl overflow-hidden",
   imageClass: "rounded-xl",
 };
 
 const cardCssClass = {
   title: {
     type: "icon",
-    css : "flex justify-center"
+    css : "w-[70px] h-[33px] sm:w-[118px] sm:h-[55px]"
   },
   price: {
     type: "text",
-    css : "text-xl font-semibold leading-5 text-[#FF1A58] text-center"
+    css: "sm:text-xl text-sm font-semibold leading-5 text-[#FF1A58] text-center",
   },
   shortDesc: {
     type: "text",
-    css : "text-[#5A5A5A] font-semibold text-sm leading-5 text-center"
+    css : "text-[#5A5A5A] font-semibold text-[10px] sm:text-sm leading-5 text-center"
   },
 }
 
 const BestOfferInBrands = () => {
   return (
-    <div className="flex gap-3">
+    <div className="flex flex-col gap-1 sm:gap-7">
+      <SectionTitle title="Best offer in brands" />
       <Slider
         aboutSlide={"card"}
         data={cardData}

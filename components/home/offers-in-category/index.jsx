@@ -98,15 +98,15 @@ const cardData = [
 ];
 
 const sliderInfo = {
-  navigation: true,
-  pagination: { clickable: true },
+  // navigation: true,
+  // pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
   slidesPerView: 5,
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
     0: {
-      slidesPerView: 1.7, // Mobile (0px and up)
+      slidesPerView: 2.7, // Mobile (0px and up)
     },
     768: {
       slidesPerView: 3, // Tablet (768px and up)
@@ -123,18 +123,19 @@ const sliderClass = {
   imageClass: "rounded-xl",
 };
 
+
 const cardCssClass = {
   title: {
     type: "icon",
-    css : "flex justify-center"
+    css : "w-[70px] h-[33px] sm:w-[118px] sm:h-[55px]"
   },
   price: {
     type: "text",
-    css : "text-xl font-semibold leading-5 text-[#FF1A58] text-center"
+    css: "sm:text-xl text-sm font-semibold leading-5 text-[#FF1A58] text-center",
   },
   shortDesc: {
     type: "text",
-    css : "text-[#5A5A5A] font-semibold text-sm leading-5 text-center"
+    css : "text-[#5A5A5A] font-semibold text-[10px] sm:text-sm leading-5 text-center"
   },
 }
 

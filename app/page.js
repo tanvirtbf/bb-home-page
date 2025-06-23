@@ -9,23 +9,23 @@ import OffersInCategory from "@/components/home/offers-in-category";
 import SingleBanner from "@/components/home/single-banner";
 import TopCategories from "@/components/home/top-categories";
 import VisitOutlet from "@/components/home/visit-outlet";
-import ProductSlider from "@/components/ProductSlider";
+import ProductSlider from "@/components/home/video-card-slider";
 
 export default async function Home() {
   // await fetch("https://procodrr.vercel.app/?sleep=1000");
 
   return (
-    <div className="max-w-[1670px] mx-auto overflow-hidden min-h-screen h-auto px-10 py-6">
-      <div className="w-full h-auto rounded-2xl">
+    <div className="max-w-[1670px] mx-auto overflow-hidden min-h-screen h-auto px-4 sm:px-10 py-3 sm:py-5">
+      <div className="w-full h-auto pb-3 sm:pb-5">
         <Hero />
       </div>
-      <div className="w-full h-auto my-20">
+      <div className="w-full h-auto py-3 sm:py-10">
         <TopCategories />
       </div>
-      <div className="my-10 bg-white">
+      <div className="bg-white ">
         <BestOfferInBrands />
       </div>
-      <div className="my-10 bg-white ">
+      <div className="py-10 bg-white sm:py-20">
         <OffersInCategory />
       </div>
       <div className="w-full h-auto bg-white rounded-2xl">

@@ -3,6 +3,7 @@ import React from "react";
 import CardImage from "../../../public/png/image5.png";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Slider from "@/components/layout/slider";
+import SectionTitle from "@/components/layout/title/section-title";
 
 const cardData = [
   {
@@ -80,15 +81,15 @@ const cardData = [
 ];
 
 const sliderInfo = {
-  navigation: true,
-  pagination: { clickable: true },
+  // navigation: true,
+  // pagination: { clickable: true },
   spaceBetween: 10,
   autoplay: true,
   slidesPerView: 3,
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
     0: {
-      slidesPerView: 1.7, // Mobile (0px and up)
+      slidesPerView: 1.1, // Mobile (0px and up)
     },
     768: {
       slidesPerView: 3, // Tablet (768px and up)
@@ -106,10 +107,10 @@ const sliderClass = {
   imageClass: "w-full h-full object-cover rounded-xl",
 };
 
-const BestOfferInBrands = () => {
+const ComboOffer = () => {
   return (
     <div className="flex flex-col gap-3">
-      <h1 className="text-4xl font-bold text-center">Exclusive Accessories</h1>
+      <SectionTitle title="Exclusive Accessories" />
       <Slider
         aboutSlide={"combo-card"}
         data={cardData}
@@ -120,4 +121,4 @@ const BestOfferInBrands = () => {
   );
 };
 
-export default BestOfferInBrands;
+export default ComboOffer;
