@@ -38,7 +38,7 @@ export default async function Home() {
       <div className="w-full h-auto py-5 sm:py-16">
         <CustomerReview />
       </div>
-      <div className="w-full h-auto py-10 bg-[#FF1A58] sm:py-20 sm:my-40 my-44 rounded-xl sm:px-56 px-10">
+      <div className="w-full h-auto py-10 bg-[#FF1A58] sm:py-20 sm:mt-40 mt-44 rounded-xl sm:px-56 px-10">
         <MobileScanner />
       </div>
       <div className="py-4 bg-white sm:py-10">
