@@ -10,6 +10,7 @@ import SingleBanner from "@/components/home/single-banner";
 import TopCategories from "@/components/home/top-categories";
 import VisitOutlet from "@/components/home/visit-outlet";
 import ProductSlider from "@/components/home/video-card-slider";
+import MobileScanner from "@/components/home/mobile-scanner";
 
 export default async function Home() {
   // await fetch("https://procodrr.vercel.app/?sleep=1000");
@@ -36,6 +37,9 @@ export default async function Home() {
       </div>
       <div className="w-full h-auto py-5 sm:py-16">
         <CustomerReview />
+      </div>
+      <div className="w-full h-auto py-10 bg-[#FF1A58] sm:py-20 sm:my-40 my-44 rounded-xl sm:px-56 px-10">
+        <MobileScanner />
       </div>
       <div className="py-4 bg-white sm:py-10">
         <VisitOutlet />
