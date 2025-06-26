@@ -20,7 +20,7 @@ export default async function Home() {
       <div className="w-full h-auto pb-3 sm:pb-5">
         <Hero />
       </div>
-      <div className="w-full h-auto py-3 sm:py-10">
+      <div className="w-full h-auto py-3 -mx-20 sm:py-10 sm:mx-0">
         <TopCategories />
       </div>
       <div className="bg-white ">

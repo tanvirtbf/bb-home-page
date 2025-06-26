@@ -104,7 +104,7 @@ const sliderInfo = {
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
     0: {
-      slidesPerView: 2.7, // Mobile (0px and up)
+      slidesPerView: 2.8, // Mobile (0px and up)
     },
     768: {
       slidesPerView: 4.2, // Tablet (768px and up)
