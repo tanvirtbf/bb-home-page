@@ -17,10 +17,10 @@ export default async function Home() {
 
   return (
     <div className="max-w-[1670px] mx-auto overflow-hidden min-h-screen h-auto px-4 sm:px-10 py-3 sm:py-5">
-      <div className="w-full h-auto pb-3 sm:pb-5">
+      <div className="w-full h-auto sm:pb-5">
         <Hero />
       </div>
-      <div className="w-full h-auto py-3 -mx-20 sm:py-10 sm:mx-0">
+      <div className="w-full h-auto py-3 sm:py-10 sm:mx-0">
         <TopCategories />
       </div>
       <div className="bg-white ">

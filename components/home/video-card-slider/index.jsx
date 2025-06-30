@@ -18,14 +18,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import TopSection from "./components/top-section";
 import BottomSection from "./components/bottom-section";
+import SectionTitle from "@/components/layout/title/section-title";
 
 const ProductSlider = () => {
   // Dummy data array matching your image
   const products = [
     {
       id: 1,
-      title: "NACINAMIDE",
-      subtitle: "With LIPSTICK",
+      title: "NIACINAMIDE",
+      subtitle: "GUIDE PEPTIDE SERUM LIPSTICK",
       price: "QAR 2000",
       category: "PEPTIDE SERUM",
       tag: "Makeup Reimagined",
@@ -70,47 +71,59 @@ const ProductSlider = () => {
   ];
 
   return (
-    <div className="w-full mx-auto my-0 ">
-      <h2 className="text-base font-medium text-[#FF1A58] leading-4 text-center my-2">
+    <div className="w-full px-4 mx-auto my-0">
+      <h2 className="text-[10px] sm:text-base font-medium text-[#FF1A58] leading-4 text-center sm:py-2 py-0">
         See what creators are sharing
       </h2>
-      <p className="text-4xl font-bold leading-7 text-center text-black uppercase">
-        FEATURED IN VIDEOS
-      </p>
+      <SectionTitle title="FEATURED IN VIDEOS" textAlign="text-center" />
 
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-          slideShadows: false,
-        }}
-        modules={[EffectCoverflow, Navigation, Pagination]}
-        // navigation
-        // pagination={{ clickable: true }}
-        loop={true}
-        initialSlide={2} // Start with center slide
-        className="centered-swiper"
-      >
-        {products.map((product) => (
-          <SwiperSlide key={product.id}>
-            <div className="product-card">
-              <TopSection image={product.image} />
-              <BottomSection />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="max-w-[1200px] mx-auto">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          spaceBetween={40} // Increased space between slides
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: false,
+          }}
+          modules={[EffectCoverflow, Navigation, Pagination]}
+          loop={true}
+          initialSlide={2}
+          className="centered-swiper"
+        >
+          {products.map((product) => (
+            <SwiperSlide key={product.id}>
+              <div className="mx-2 product-card">
+                {" "}
+                {/* Added horizontal margin */}
+                <TopSection image={product.image} />
+                <BottomSection
+                  title={product.title}
+                  subtitle={product.subtitle}
+                  price={product.price}
+                  category={product.category}
+                  tag={product.tag}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       <style jsx global>{`
         .centered-swiper {
           width: 100%;
           padding: 50px 0;
+        }
+        @media (max-width: 768px) {
+          .centered-swiper {
+            padding: 10px 0;
+          }
         }
 
         .centered-swiper .swiper-slide {
@@ -138,80 +151,17 @@ const ProductSlider = () => {
       `}</style>
 
       <style jsx>{`
-        .slider-container {
-          padding: 20px;
-          width: 100%;
-          margin: 0 auto;
-          font-family: "Arial", sans-serif;
-        }
-
-        .section-title {
-          text-align: center;
-          font-size: 24px;
-          margin-bottom: 5px;
-          color: #333;
-        }
-
-        .section-subtitle {
-          text-align: center;
-          font-size: 16px;
-          margin-bottom: 30px;
-          color: #888;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-        }
-
         .product-card {
           background: white;
           border-radius: 16px;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           height: auto;
           display: flex;
-          gap: 12px;
           flex-direction: column;
           justify-content: center;
           text-align: center;
           position: relative;
-          margin: 0 10px;
-        }
-
-        .product-tag {
-          position: absolute;
-          top: 15px;
-          left: 15px;
-          background: #f8f8f8;
-          padding: 5px 10px;
-          border-radius: 20px;
-          font-size: 12px;
-          color: #666;
-        }
-
-        .product-title {
-          font-size: 24px;
-          margin: 10px 0;
-          color: #222;
-          font-weight: bold;
-        }
-
-        .product-subtitle {
-          font-size: 14px;
-          color: #888;
-          margin-bottom: 15px;
-        }
-
-        .product-category {
-          font-size: 13px;
-          color: #555;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-        }
-
-        .product-price {
-          font-size: 16px;
-          color: #000;
-          font-weight: bold;
-          margin-top: auto;
+          overflow: hidden;
         }
       `}</style>
     </div>

@@ -26,7 +26,7 @@ const sliderInfo = {
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
   swiperSlideClass: " w-full h-full",
-  imageParentClass: "w-full sm:h-[600px] h-[200px] relative rounded-2xl overflow-hidden",
+  imageParentClass: "w-full h-auto relative rounded-2xl overflow-hidden",
   imageClass: "rounded-2xl",
 };
 

@@ -138,7 +138,7 @@ const TopCategories = () => {
   return (
     <div className="flex flex-col gap-[2px] sm:gap-7">
       <SectionTitle title="Top categroies" />
-      <div className="sm:px-28 px-3 sm:py-10 py-3 sm:bg-[#EDD0BC] bg-white rounded-xl">
+      <div className="sm:py-10 py-3 sm:bg-[#EDD0BC] bg-white rounded-xl">
         <Slider
           aboutSlide={"card"}
           data={cardData}
