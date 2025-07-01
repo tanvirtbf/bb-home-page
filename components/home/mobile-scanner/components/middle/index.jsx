@@ -4,7 +4,7 @@ import Text from './components/text'
 
 const Middle = () => {
   return (
-    <div className='flex flex-col order-3 gap-6 sm:gap-9 sm:order-2'>
+    <div className='flex flex-col order-3 gap-6 sm:gap-9 lg:order-2'>
       <Text />
       <Input />
     </div>

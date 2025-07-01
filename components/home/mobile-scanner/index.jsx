@@ -5,7 +5,7 @@ import Middle from "./components/middle";
 
 const MobileScanner = () => {
   return (
-    <div className="flex flex-col gap-0 sm:gap-20 sm:flex-row">
+    <div className="flex flex-col gap-0 lg:gap-20 lg:flex-row">
       <Left />
       <Middle />
       <Right />
