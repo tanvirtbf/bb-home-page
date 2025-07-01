@@ -4,7 +4,7 @@ import React from 'react'
 const View = ({ image="", imgClass="" }={}) => {
   return (
     <div>
-        <Image src={image} width={300} height={400} alt='Card Image' className={imgClass} />
+      <Image src={image} width={0} height={0} alt='Card Image' className={imgClass} />
     </div>
   )
 }

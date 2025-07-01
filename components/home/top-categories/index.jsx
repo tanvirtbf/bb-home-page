@@ -99,7 +99,7 @@ const sliderInfo = {
   navigation: false,
   // pagination: { clickable: true },
   spaceBetween: 10,
-  autoplay: true,
+  autoplay: false,
   slidesPerView: 5,
   modules: [Navigation, Pagination, Autoplay],
   breakpoints: {
@@ -110,15 +110,15 @@ const sliderInfo = {
       slidesPerView: 4.2, // Tablet (768px and up)
     },
     1024: {
-      slidesPerView: 6, // Desktop (1024px and up) – your original setting
+      slidesPerView: 8, // Desktop (1024px and up) – your original setting
     },
   },
 };
 
 const sliderClass = {
   parentClass: "h-full w-full slider-container",
-  swiperSlideClass: "w-full h-full rounded-full",
-  imageClass: "rounded-full sm:w-[190px] w-20 sm:h-[190px] h-20",
+  swiperSlideClass: "w-full h-full rounded-full hello",
+  imageClass: "rounded-full sm:w-[120px] w-20 sm:h-[120px] h-20",
   imageParentClass: "w-full h-full rounded-full overflow-hidden flex justify-center items-center mb-3 sm:mb-10",
 };
 

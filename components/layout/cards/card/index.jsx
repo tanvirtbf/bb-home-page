@@ -17,7 +17,7 @@ const Card = ({ data = {}, imgClass="", cardCss={} } = {}) => {
   }
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center w-fit">
       <ImageContainer img={url} imgClass={imgClass} />
       {renderTitle()}
       {cardCss.price && <PriceContainer price={price} className={cardCss.price.css} />}
