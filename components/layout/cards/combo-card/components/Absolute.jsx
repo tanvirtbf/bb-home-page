@@ -3,7 +3,7 @@ import React from "react";
 
 const Absolute = ({ price = "", text = "" } = {}) => {
   return (
-    <div className="absolute z-10 flex flex-col gap-3 text-white left-10 bottom-10">
+    <div className="absolute z-10 flex flex-col gap-2 text-white sm:gap-3 sm:left-10 sm:bottom-10 left-4 bottom-4">
       <div>
         <div className="text-base font-semibold sm:text-xl">{price}</div>
         <div className="text-xs font-normal sm:text-sm">{text}</div>
