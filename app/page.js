@@ -16,7 +16,7 @@ export default async function Home() {
   // await fetch("https://procodrr.vercel.app/?sleep=1000");
 
   return (
-    <div className="max-w-[1670px] mx-auto overflow-hidden min-h-screen h-auto px-4 sm:px-10 py-3 sm:py-5">
+    <div>
       <div className="w-full h-auto sm:pb-5">
         <Hero />
       </div>
