@@ -89,7 +89,7 @@ const sliderInfo = {
       slidesPerView: 2.2, // Tablet (768px and up)
     },
     1024: {
-      slidesPerView: 4.3, // Desktop (1024px and up) – your original setting
+      slidesPerView: 3.8, // Desktop (1024px and up) – your original setting
     },
   },
 };
