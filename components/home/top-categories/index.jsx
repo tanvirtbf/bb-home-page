@@ -110,7 +110,7 @@ const sliderInfo = {
       slidesPerView: 4.2, // Tablet (768px and up)
     },
     1024: {
-      slidesPerView: 8, // Desktop (1024px and up) – your original setting
+      slidesPerView: 6, // Desktop (1024px and up) – your original setting
     },
   },
 };
@@ -138,7 +138,7 @@ const TopCategories = () => {
   return (
     <div className="flex flex-col gap-[2px] sm:gap-7">
       <SectionTitle title="Top categroies" />
-      <div className="sm:py-10 py-3 sm:bg-[#EDD0BC] bg-white rounded-xl">
+      <div className="sm:py-10 py-3 px-0 sm:px-10 md:px-28 sm:bg-[#EDD0BC] bg-white rounded-xl">
         <Slider
           aboutSlide={"card"}
           data={cardData}
