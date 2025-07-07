@@ -41,15 +41,8 @@ const RewardsComponent = () => {
     <div className="flex flex-col col-span-12 gap-4 md:col-span-9 md:gap-5">
       <BackNavigate
         arrowClassName={"rotate-180"}
-        text="my coins"
-        onClick={() =>
-          setWhichClick({
-            pointsActivity: false,
-            specialOffers: false,
-            yourPersonalCoupon: false,
-            aboutRewardsProgram: false,
-          })
-        }
+        text={showPoints ? "my coins" : "points activity"}
+        onClick={setWhichClick}
       />
       <div className="grid grid-cols-12 gap-4 sm:gap-8">
         <Left />
