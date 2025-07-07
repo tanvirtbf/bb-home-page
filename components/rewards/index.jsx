@@ -38,7 +38,7 @@ const RewardsComponent = () => {
   }, [isAnyClicked]);
 
   return (
-    <div className="flex flex-col col-span-9 gap-4 md:gap-5">
+    <div className="flex flex-col col-span-12 gap-4 md:col-span-9 md:gap-5">
       <BackNavigate
         arrowClassName={"rotate-180"}
         text="my coins"
