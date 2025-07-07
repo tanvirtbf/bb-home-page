@@ -1,9 +1,17 @@
 import React from "react";
 import RightArrowIcon from "../svg/RightArrowIcon";
 
-const BackNavigate = ({ arrowClassName = "", text = "" } = {}) => {
+const BackNavigate = ({ arrowClassName = "", text = "", onClick=()=>{} } = {}) => {
+  const handleClick = () =>{
+    onClick({
+      pointsActivity: false,
+      specialOffers: false,
+      yourPersonalCoupon: false,
+      aboutRewardsProgram: false,
+    });
+  }
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 cursor-pointer" onClick={handleClick}>
       <div className="items-center justify-center hidden md:flex">
         <RightArrowIcon className={arrowClassName} />
       </div>
