@@ -68,22 +68,61 @@ const ProductSlider = () => {
       tag: "Pro",
       image: ImageFive,
     },
+    {
+      id: 6,
+      title: "HYALURONIC",
+      subtitle: "Acid Serum",
+      price: "QAR 2000",
+      category: "Beauty Tools",
+      tag: "Bestseller",
+      image: ImageOne,
+    },
+    {
+      id: 7,
+      title: "RETINOL",
+      subtitle: "Night Complex",
+      price: "QAR 2000",
+      category: "Beauty Tools",
+      tag: "Pro",
+      image: ImageFive,
+    },
+    {
+      id: 8,
+      title: "RETINOL",
+      subtitle: "Night Complex",
+      price: "QAR 2000",
+      category: "Beauty Tools",
+      tag: "Pro",
+      image: ImageTwo,
+    },
+    {
+      id: 9,
+      title: "RETINOL",
+      subtitle: "Night Complex",
+      price: "QAR 2000",
+      category: "Beauty Tools",
+      tag: "Pro",
+      image: ImageThree,
+    },
+
   ];
 
+  const initialSlide = products.length / 2 + 1;
+
   return (
-    <div className="w-full px-4 mx-auto my-0">
+    <div className="w-full mx-auto my-0">
       <h2 className="text-[10px] sm:text-base font-medium text-[#FF1A58] leading-4 text-center sm:py-2 py-0">
         See what creators are sharing
       </h2>
       <SectionTitle title="FEATURED IN VIDEOS" textAlign="text-center" />
 
-      <div className="max-w-[1200px] mx-auto">
+      <div className="w-full mx-auto">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
-          spaceBetween={40} // Increased space between slides
+          spaceBetween={20} // Increased space between slides
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -93,7 +132,7 @@ const ProductSlider = () => {
           }}
           modules={[EffectCoverflow, Navigation, Pagination]}
           loop={true}
-          initialSlide={2}
+          initialSlide={initialSlide}
           className="centered-swiper"
         >
           {products.map((product) => (
